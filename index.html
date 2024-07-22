@@ -1,0 +1,73 @@
+<html>
+<head>
+<style>
+*{
+    font-size: 120%;
+}
+.container{
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 130px;
+    margin-bottom: 180px;
+display:grid;
+grid-template-columns:  100px 100px 100px 100px;
+grid-template-rows:  100px 100px 100px 100px 100px;
+}
+.container > div{
+
+    border: 3px solid black;  
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#output{
+    grid-column: 1/4;
+    background-color: WHITE;
+    
+}
+
+#NO{
+    background-color: green;
+}
+
+#OP{
+    background-color: rgb(149, 149, 7);
+}
+.container > div:hover{
+    background-color: white;
+}
+
+</style>   
+</head>
+
+<body>
+
+    <div class="container">
+        <div  id="output"></div>
+        <div  id="OP" onclick="clearScreen()">clr</div>
+        <div  id="NO" onclick="enterNumber('7')">7</div>
+        <div  id="NO" onclick="enterNumber('8')">8</div>
+        <div  id="NO" onclick="enterNumber('9')">9</div>
+        <div  id="OP" onclick="enterOperator('/')">/</div>
+        <div  id="NO" onclick="enterNumber('4')">4</div>
+        <div  id="NO" onclick="enterNumber('5')">5</div>
+        <div  id="NO" onclick="enterNumber('6')">6</div>
+        <div  id="OP" onclick="enterOperator('*')">*</div>
+        <div  id="NO" onclick="enterNumber('1')">1</div>
+        <div  id="NO" onclick="enterNumber('2')">2</div>
+        <div  id="NO" onclick="enterNumber('3')">3</div>
+        <div  id="OP" onclick="enterOperator('-')">-</div>
+        <div  id="NO" onclick="enterNumber('.')">.</div>
+        <div  id="NO" onclick="enterNumber('0')">0</div>
+        <div  id="OP" onclick="enterOperator('=')">=</div>
+        <div  id="OP" onclick="enterOperator('+')">+</div>
+
+     </div>   
+
+
+</body>
+
+ <script src="script.js"></script>       
+</html>
